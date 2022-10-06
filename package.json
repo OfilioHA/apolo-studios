@@ -1,0 +1,25 @@
+{
+  "name": "apolo-studios",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.5",
+    "@types/jquery": "^3.5.14",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.2.2",
+    "jquery": "^3.6.1",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.55.0"
+  }
+}

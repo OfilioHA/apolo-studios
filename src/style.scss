@@ -1,0 +1,84 @@
+
+@import 'node_modules/normalize.css/normalize';
+
+$dark: #0F0F0F;
+$secondary: #1A1A1A;
+$primary: #194677;
+$success: #3A8FE4;
+$light: #FDFDFD;
+
+$btn-border-radius-lg: 0px;
+
+$card-border-width: 2px;
+$card-border-color: $light;
+$card-border-radius: 0px;
+$card-bg: $dark;
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+$linebulk: 0.5rem;
+$lineseparation: 1rem;
+$linespace: calc(100% - $lineseparation);
+
+body{
+    section {
+        padding: 5rem 0px;
+    }
+}
+
+#hero-section{
+    padding-bottom: 0px;
+}
+
+#features{
+    padding-top: 4rem;
+    padding-bottom: 0px;
+    position: relative;
+
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        height: 25%;
+        width: 100%;
+        background-color: $light;
+    }
+}
+
+.v-line{
+    height: $linespace;
+    width: $linebulk;
+    background-color: $primary;
+    position: absolute;
+
+    @at-root .down#{&}{
+        top: $lineseparation;
+        transform-origin: top;
+        animation: lineVertical 2s ease 0s;
+    }
+}
+
+.h-line{
+    height: $linebulk;
+    width: $linespace;
+    background-color: $primary;
+    position: absolute;
+
+    @at-root .rigth#{&}{
+        left: $lineseparation;
+        transform-origin: left;
+        animation: lineHorizontal 2s ease 0s;
+    }
+}
+
+@keyframes lineVertical{
+    from { height: 0%; }
+    to { height: $linespace; }
+}
+
+@keyframes lineHorizontal{
+    from { width: 0%; }
+    to { width: $linespace; }
+}
+
